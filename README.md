@@ -27,12 +27,34 @@ El Instituto Nacional de Antropología e Historia (INAH) gestiona un vasto patri
 
 El conjunto de datos utilizado contiene las siguientes columnas:
 
-- `NombreColumna1`: [Descripción]
-- `NombreColumna2`: [Descripción]
-- `NombreColumna3`: [Descripción]
-- `...`
+- `anio`: Año en que se registro la visita
+- `estado`: Nombre del estado
+- `ckave_siinah`: Clave númerica de registro
+- `recinto`: Nombre del museo
+- `enero_nac`: Visitas nacionales
+- `enero_ext`: Visitas extranjeras
+- `febrero_nac`: Visitas nacionales
+- `febrero_ext`:Visitas extranjeras
+- `marzo_nac`: Visitas nacionales
+- `marzo_ext`:Visitas extranjeras
+- `abril_nac`: Visitas nacionales
+- `abril_ext`:Visitas extranjeras
+- `mayo_nac`: Visitas nacionales
+- `mayo_ext`: Visitas extranjeras
+- `junio_nac`: Visitas nacionales
+- `julio_ext`: Visitas extranjeras
+- `agosto_nac`: Visitas nacionales
+- `agosto_ext`:Visitas extranjeras
+- `septiembre_nac`: Visitas nacionales
+- `septiembre_ext`: Visitas extranjeras
+- `octubre_nac`: Visitas nacionales
+- `octubre_ext`: Visitas extranjeras
+- `noviembre_nac`: Visitas nacionales
+- `noviembre_ext`: Visitas extranjeras
+- `diciembre_nac`: Visitas nacionales
+- `diciembre_ext`: Visitas extranjeras
 
-Fuente: [Nombre de la fuente o “datos simulados/ficticios”].
+Fuente: [Visitantes a museos abiertos al público](https://www.datos.gob.mx/dataset/visitantes_museos_abiertos_publico).
 
 ---
 

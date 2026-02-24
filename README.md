@@ -19,7 +19,7 @@ El Instituto Nacional de Antropología e Historia (INAH) gestiona un vasto patri
 
 ## 🎯 Propósito
 
-El objetivo de este proyecto es [objetivo general del análisis], con el fin de [impacto esperado, decisiones que se tomarán, etc.].
+ Visualizar la evolución histórica de las visitas nacionales y extranjeras en los distintos estados de la República Mexicana y desarrollar un modelo predictivo para la afluencia esperada durante el 2026.
 
 ---
 

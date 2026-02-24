@@ -1,7 +1,7 @@
 # 📊 Museos INAH
 # Análisis de las visitas a los museos INAH
 
-Este proyecto realiza un análisis [exploratorio / predictivo / descriptivo] de [tema del proyecto]. El conjunto de datos incluye información sobre [breve descripción del contenido del dataset].
+El Instituto Nacional de Antropología e Historia (INAH) gestiona un vasto patrimonio cultural que requiere una administración basada en datos. Este proyecto busca transformar los registros históricos de visitas en información estratégica para la toma de decisiones.
 
 ---
 

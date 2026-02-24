@@ -1,5 +1,5 @@
-# 📊 [Nombre_Del_Proyecto]
-# [Título del Análisis]
+# 📊 Museos INAH
+# Análisis de las visitas a los museos INAH
 
 Este proyecto realiza un análisis [exploratorio / predictivo / descriptivo] de [tema del proyecto]. El conjunto de datos incluye información sobre [breve descripción del contenido del dataset].
 

@@ -27,9 +27,9 @@ El Instituto Nacional de Antropología e Historia (INAH) gestiona un vasto patri
 
 El conjunto de datos utilizado contiene las siguientes columnas:
 
-- `anio`: Año en que se registro la visita
-- `estado`: Nombre del estado
-- `ckave_siinah`: Clave númerica de registro
+- `anio`: 	Año del registro
+- `estado`: Entidad donde se encuentra el Recinto Cultural
+- `clave_siinah`: Clave interna de los Sitios que se reportan
 - `recinto`: Nombre del museo
 - `enero_nac`: Visitas nacionales
 - `enero_ext`: Visitas extranjeras

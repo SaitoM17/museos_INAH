@@ -56,3 +56,10 @@ estados_nacionales = [c for c in df_INAH_visitas.columns if c.endswith('_nac')]
 
 estados_nacionales = df_INAH_visitas[estados_nacionales].sum()
 print(estados_nacionales.sort_values(ascending=False).head(1))
+
+# Estados con más visitas(extranjeras)
+estados_extranjeros = [c for c in df_INAH_visitas.columns if c.endswith('_ext')]
+
+estados_extranjeros = df_INAH_visitas.groupby('estado')[estados_extranjeros].sum()
+
+print(estados_extranjeros.sum(axis=1).sort_values(ascending=False).head(1))

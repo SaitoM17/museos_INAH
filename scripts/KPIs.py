@@ -50,3 +50,9 @@ visitas_n_e = pd.DataFrame(series_concatenado)
 promedio_vistas = visitas_n_e.mean().iloc[0]
 
 print(f'Promedio de visitas: {promedio_vistas:,.2f}')
+
+# Estado con más vistas(nacionales)
+estados_nacionales = [c for c in df_INAH_visitas.columns if c.endswith('_nac')]
+
+estados_nacionales = df_INAH_visitas[estados_nacionales].sum()
+print(estados_nacionales.sort_values(ascending=False).head(1))

@@ -42,3 +42,11 @@ total_visitas_extranjeras = suma_extranjera.sum()
 
 total_visitas = total_visitas_nacional + total_visitas_extranjeras
 print(f'Total de visitas: {total_visitas:,}')
+
+# Promedio de visitas(tanto nacionales como extranjeras)
+series_concatenado = pd.concat([suma_nacional,suma_extranjera])
+visitas_n_e = pd.DataFrame(series_concatenado)
+
+promedio_vistas = visitas_n_e.mean().iloc[0]
+
+print(f'Promedio de visitas: {promedio_vistas:,.2f}')

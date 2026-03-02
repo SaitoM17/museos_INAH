@@ -7,38 +7,12 @@ print(df_INAH_visitas.head(5))
 # Total de visitas(tanto extranjeras como nacionales)
 
 # Visitas nacionales
-visitas_nacionales = df_INAH_visitas[['enero_nac', 
-                                      'febrero_nac', 
-                                      'marzo_nac', 
-                                      'abril_nac', 
-                                      'mayo_nac', 
-                                      'junio_nac', 
-                                      'julio_nac', 
-                                      'agosto_nac', 
-                                      'septiembre_nac', 
-                                      'octubre_nac', 
-                                      'noviembre_nac', 
-                                      'diciembre_nac'
-                                    ]]
-suma_nacional = visitas_nacionales.sum()
-total_visitas_nacional = suma_nacional.sum()
+estados_nacionales = [c for c in df_INAH_visitas.columns if c.endswith('_nac')]
+total_visitas_nacional = df_INAH_visitas[estados_nacionales].sum().sum()
 
 # Visitas extranjeras
-visitas_extranjeras = df_INAH_visitas[['enero_ext', 
-                                      'febrero_ext', 
-                                      'marzo_ext', 
-                                      'abril_ext', 
-                                      'mayo_ext', 
-                                      'junio_ext', 
-                                      'julio_ext', 
-                                      'agosto_ext', 
-                                      'septiembre_ext', 
-                                      'octubre_ext', 
-                                      'noviembre_ext', 
-                                      'diciembre_ext'
-                                    ]]
-suma_extranjera = visitas_extranjeras.sum()
-total_visitas_extranjeras = suma_extranjera.sum()
+estados_extranjeros = [c for c in df_INAH_visitas.columns if c.endswith('_ext')]
+total_visitas_extranjeras = df_INAH_visitas[estados_extranjeros].sum().sum()
 
 total_visitas = total_visitas_nacional + total_visitas_extranjeras
 print(f'Total de visitas: {total_visitas:,}')
@@ -52,8 +26,6 @@ promedio_vistas = visitas_n_e.mean().iloc[0]
 print(f'Promedio de visitas: {promedio_vistas:,.2f}')
 
 # Estado con más vistas(nacionales)
-estados_nacionales = [c for c in df_INAH_visitas.columns if c.endswith('_nac')]
-
 estados_nacionales = df_INAH_visitas.groupby('estado')[estados_nacionales].sum()
 
 visitas_por_estado_nacional = estados_nacionales.sum(axis=1)
@@ -63,8 +35,6 @@ valor_top_nac = visitas_por_estado_nacional.max()
 print(f'Estado con más visitas Nacionales: {estado_top_nac} con {valor_top_nac:,} visitas')
 
 # Estados con más visitas(extranjeras)
-estados_extranjeros = [c for c in df_INAH_visitas.columns if c.endswith('_ext')]
-
 estados_extranjeros = df_INAH_visitas.groupby('estado')[estados_extranjeros].sum()
 
 visitas_por_estado_extranjeras = estados_extranjeros.sum(axis=1)

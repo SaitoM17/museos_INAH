@@ -18,6 +18,8 @@ total_visitas = total_visitas_nacional + total_visitas_extranjeras
 print(f'Total de visitas: {total_visitas:,}')
 
 # Promedio de visitas(tanto nacionales como extranjeras)
+suma_nacional = df_INAH_visitas[estados_nacionales].sum()
+suma_extranjera = df_INAH_visitas[estados_extranjeros].sum()
 series_concatenado = pd.concat([suma_nacional,suma_extranjera])
 visitas_n_e = pd.DataFrame(series_concatenado)
 

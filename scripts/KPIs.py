@@ -56,11 +56,19 @@ estados_nacionales = [c for c in df_INAH_visitas.columns if c.endswith('_nac')]
 
 estados_nacionales = df_INAH_visitas.groupby('estado')[estados_nacionales].sum()
 
-print(estados_nacionales.sum(axis=1).sort_values(ascending=False).head(1))
+visitas_por_estado_nacional = estados_nacionales.sum(axis=1)
+estado_top_nac = visitas_por_estado_nacional.idxmax()
+valor_top_nac = visitas_por_estado_nacional.max()
+
+print(f'Estado con más visitas Nacionales: {estado_top_nac} con {valor_top_nac:,} visitas')
 
 # Estados con más visitas(extranjeras)
 estados_extranjeros = [c for c in df_INAH_visitas.columns if c.endswith('_ext')]
 
 estados_extranjeros = df_INAH_visitas.groupby('estado')[estados_extranjeros].sum()
 
-print(estados_extranjeros.sum(axis=1).sort_values(ascending=False).head(1))
+visitas_por_estado_extranjeras = estados_extranjeros.sum(axis=1)
+estado_top_ext = visitas_por_estado_extranjeras.idxmax()
+valor_top_ext = visitas_por_estado_extranjeras.max()
+
+print(f'Estado con más visitas Extranjeras: {estado_top_ext} con {valor_top_ext:,} visitas')
